@@ -1,0 +1,3 @@
+#!/bin/bash
+# date > /home/IBEO.AS/mamu/tmp/betterbird-last-restart
+pkill betterbird && sleep 3; DISPLAY=:0 XDG_RUNTIME_DIR=/run/user/$(id -u) /home/mamu/.local/share/apps/betterbird/betterbird 2>&1 &

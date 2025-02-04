@@ -1,0 +1,48 @@
+#!/bin/bash
+# delay autostart script to delay app start  until plasma is done renumbering screens so that apps start on corret screens
+# set -x
+
+sleep 20
+
+# Firefox
+# gtk-launch firefox.desktop
+gtk-launch firefox_firefox.desktop &
+sleep 3
+
+# Betterbird
+gtk-launch Betterbird.desktop &
+sleep 3
+
+# Innovaphone myApp
+gtk-launch msedge-mlebhakjoendblbffadappfmhponkbmp-Default &
+sleep 3
+
+# Teams
+# gtk-launch teams-for-linux.desktop
+gtk-launch teams-for-linux_teams-for-linux
+sleep 3
+
+# Outlook
+# gtk-launch outlook-for-linux_outlook-for-linux.desktop
+# gtk-launch msedge-faolnafnngnfdaknnbpnkhgohbobgegn-Profile_4.desktop
+# gtk-launch prospect-mail_prospect-mail.desktop
+sleep 10
+gtk-launch FFPWA-01JASBKW5S5QN6MJ0MA2X6K2B2 &
+sleep 3
+
+# Bitwarden Vault
+# gtk-launch msedge-fflifmfnonladkgkdehllhbcghakccgh-Default
+gtk-launch FFPWA-01JK7R6PEEHY6TKVXQRV5P6DCA &
+sleep 3
+
+# Ferdium
+gtk-launch ferdium &
+sleep 3
+
+# Signal
+/opt/Signal/signal-desktop --no-sandbox %U &
+sleep 3
+
+# Todo - Alinas Confluence Task list
+gtk-launch FFPWA-01JEVF3D3KNEFT5YVHNXT1M1WR &
+sleep 3

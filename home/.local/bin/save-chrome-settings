@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Chrome has a bug which cause a restore pop-up every time chrome was closed by
+# OS an not by hand
+# to avoid this bug 2 config files are set to read-only which also will block
+# saving of settings changes
+
+# to save changes first run this script, which will set the files to writeable
+# and then will wait until changes in chromes were made. 
+# restart chrome
+# Confirm restart and script will set read-only again
+
+sudo chattr -i ~/.config/google-chrome/Local\ State
+sudo chattr -i ~/.config/google-chrome/Default/Preferences
+
+read -p "Press enter after Chrome settings were changed and Chrome was closed"
+
+sudo chattr +i ~/.config/google-chrome/Local\ State
+sudo chattr +i ~/.config/google-chrome/Default/Preferences
+
+echo "That's all, folks!"

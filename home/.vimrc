@@ -33,3 +33,5 @@ set showcmd             " show (partial) command in status line
 set wrap!
 set formatoptions-=t
 set mouse=a
+
+nmap <C-S-v> <C-v>

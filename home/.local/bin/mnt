@@ -1,0 +1,47 @@
+#!/bin/bash
+
+# script to mount some shit
+
+# username for shares
+user=$(whoami)
+
+# IP of krakendaten.ibeo.as
+ip=10.20.30.242
+
+# Name of VPN connection (check: nmcli connection show)
+vpn="Mvis HH"
+
+# functions
+
+do_mounting() {
+    if ! mountpoint -q $2 ; then
+        sudo mount $1 $2 -o user=$user,domain=ibeo,file_mode=0777,dir_mode=0777,vers=3,sec=krb5,cruid=$user
+    fi
+}
+
+echo "Going to test connection..."
+
+if !  nc -v -z -w 2 -n $ip 139 > /dev/null 2>&1 ; then
+    echo "Can't reach server. Going to connect VPN..."
+    nmcli connection up $(nmcli --get-values connection.uuid connection show "$vpn") > /dev/null 2>&1
+
+    # test connection
+    if ! nmcli --get-values general.state connection show "$vpn" > /dev/null 2>&1 ; then
+        echo "Conneection could not be established! Aborted."
+        exit 1
+    fi
+fi
+
+echo "Start mounting..."
+# mount IT
+do_mounting //file01.ibeo.as/IT /mnt/it
+
+# mount home
+do_mounting //krakendaten.ibeo.as/home /mnt/home
+
+#mount transfer
+do_mounting //krakendaten.ibeo.as/transfer /mnt/transfer
+
+echo -e  "\n\nThat's all folks!"
+
+exit 0
