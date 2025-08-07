@@ -31,7 +31,7 @@ if !  nc -v -z -w 2 -n $ip 139 > /dev/null 2>&1 ; then
         exit 1
     fi
 fi
-
+sleep 5
 echo "Start mounting..."
 # mount IT
 do_mounting //file01.ibeo.as/IT /mnt/it

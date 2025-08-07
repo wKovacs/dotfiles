@@ -15,11 +15,12 @@ sleep 3
 
 # Innovaphone myApp
 gtk-launch msedge-mlebhakjoendblbffadappfmhponkbmp-Default &
+# /usr/bin/firefoxpwa site launch 01JQTKH8ABNDPJVZM2N3DSTS6R &
 sleep 3
 
 # Teams
-# gtk-launch teams-for-linux.desktop
-gtk-launch teams-for-linux_teams-for-linux
+gtk-launch teams-for-linux.desktop
+# gtk-launch teams-for-linux_teams-for-linux &
 sleep 3
 
 # Outlook
@@ -27,22 +28,28 @@ sleep 3
 # gtk-launch msedge-faolnafnngnfdaknnbpnkhgohbobgegn-Profile_4.desktop
 # gtk-launch prospect-mail_prospect-mail.desktop
 sleep 10
-gtk-launch FFPWA-01JASBKW5S5QN6MJ0MA2X6K2B2 &
+/usr/bin/firefoxpwa site launch 01JASBKW5S5QN6MJ0MA2X6K2B2 & #--url https://outlook.office.com/mail/ &
 sleep 3
 
 # Bitwarden Vault
 # gtk-launch msedge-fflifmfnonladkgkdehllhbcghakccgh-Default
-gtk-launch FFPWA-01JK7R6PEEHY6TKVXQRV5P6DCA &
+# gtk-launch FFPWA-01JK7R6PEEHY6TKVXQRV5P6DCA &
+# gtk-launch bitwarden_bitwarden &
 sleep 3
 
-# Ferdium
+# Ferdiu01JEVF3D3KNEFT5YVHNXT1M1WRm
 gtk-launch ferdium &
 sleep 3
 
 # Signal
-/opt/Signal/signal-desktop --no-sandbox %U &
+#/opt/Signal/signal-desktop --no-sandbox %U --password-store=kwallet5 &
+/opt/Signal/signal-desktop %U --password-store=kwallet5 &
 sleep 3
 
 # Todo - Alinas Confluence Task list
-gtk-launch FFPWA-01JEVF3D3KNEFT5YVHNXT1M1WR &
+/usr/bin/firefoxpwa site launch 01K1T0PEE9RVGW6SH1A87N4GPY &
+sleep 3
+
+# Weekly Status
+/usr/bin/firefoxpwa site launch 01K1T15AJ6QPDANMRDBDQ1JTVM &
 sleep 3

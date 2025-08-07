@@ -1,2 +1,2 @@
 #!/bin/bash
-xset dpms force suspend
+xset dpms force off
