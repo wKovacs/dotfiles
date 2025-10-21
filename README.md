@@ -1,5 +1,7 @@
-some of my config files
-read README.md in the folders to learn the right place to put or hard link it
+AFTER pulling from git
+just run ./deploy.sh to create soft links for the watched files
 
-hardlink with: 
-    ln 'source' 'target'
+ADD new files
+create the same folder structure in ./home and place the files in their corresponding folder
+
+run ./deploy.sh to create soft links in the working folders (existing files were removed)
