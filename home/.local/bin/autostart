@@ -14,8 +14,8 @@ gtk-launch Betterbird.desktop &
 sleep 3
 
 # Innovaphone myApp
-gtk-launch msedge-mlebhakjoendblbffadappfmhponkbmp-Default &
 # /usr/bin/firefoxpwa site launch 01JQTKH8ABNDPJVZM2N3DSTS6R &
+gtk-launch msedge-mlebhakjoendblbffadappfmhponkbmp-Default &
 sleep 3
 
 # Teams
@@ -37,7 +37,7 @@ sleep 3
 # gtk-launch bitwarden_bitwarden &
 sleep 3
 
-# Ferdiu01JEVF3D3KNEFT5YVHNXT1M1WRm
+# Ferdium
 gtk-launch ferdium &
 sleep 3
 
@@ -47,9 +47,11 @@ sleep 3
 sleep 3
 
 # Todo - Alinas Confluence Task list
-/usr/bin/firefoxpwa site launch 01K1T0PEE9RVGW6SH1A87N4GPY &
+# moved to firefox Pinned
+# /usr/bin/firefoxpwa site launch 01K1T0PEE9RVGW6SH1A87N4GPY &
 sleep 3
 
 # Weekly Status
-/usr/bin/firefoxpwa site launch 01K1T15AJ6QPDANMRDBDQ1JTVM &
+# Moved to firefox Pinned
+# /usr/bin/firefoxpwa site launch 01K1T15AJ6QPDANMRDBDQ1JTVM &
 sleep 3
