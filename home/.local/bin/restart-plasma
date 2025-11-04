@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+echo "Restarting Plasma shell..."
+echo "Stopping plasmashell..."
+kquitapp5 plasmashell 2>/dev/null
+
+echo "Waiting 3 seconds..."
+sleep 3
+
+echo "Starting plasmashell..."
+kstart5 plasmashell 2>/dev/null
+
+echo "Plasma shell restarted."

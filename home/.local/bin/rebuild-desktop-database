@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+echo "Updating desktop database..."
+
+update-desktop-database ~/.local/share/applications 2>/dev/null || true
+kbuildsycoca6 --noincremental 2>/dev/null || true
+
+echo "Done."
