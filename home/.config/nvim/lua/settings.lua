@@ -4,6 +4,7 @@ vim.opt.background="dark"
 vim.opt.wildmode="longest:full,full"
 vim.opt.visualbell=true
 vim.opt.cursorline=true
+vim.opt.cursorcolumn=true
 vim.opt.number=true
 
 -- Whitespace
@@ -27,3 +28,14 @@ vim.opt.directory=HOME .. "/.vimtmp"
 
 -- Use system clipboard for all Neovim copy/paste operations avoiding copying of line numbers
 vim.opt.clipboard = 'unnamedplus'
+
+-- Remove auto-commenting (new lines start with comment chracter if current line is a comment)
+vim.opt.formatoptions:remove({'r', 'o'})
+
+-- Disable auto-commenting after filetype plugins load
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "*", -- Apply to all file types
+  callback = function()
+    vim.opt.formatoptions:remove({'r', 'o'})
+  end,
+})
