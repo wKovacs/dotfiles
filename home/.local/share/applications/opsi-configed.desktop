@@ -1,0 +1,23 @@
+[Desktop Entry]
+# Set the type of entry
+Type=Application
+
+# 1. The full path to the executable file
+Exec=/home/mamu/.local/bin/opsi-configed-linux.run
+
+# 2. The name displayed in the menu
+Name=OPSI Config Editor
+
+# 3. Optional: A comment shown when hovering
+Comment=Launch OPSI Configuration Editor
+
+# 4. Optional: A path to an icon file (e.g., a .png file)
+# If you have an icon, place it in ~/.local/share/icons/ and update this path.
+#Icon=application-x-executable
+Icon=/home/mamu/.local/share/icons/hicolor/128x128/apps/opsi-configed.png
+
+# 5. Where the application should be shown
+Categories=System;
+Terminal=false
+# Use the WM_CLASS string you found
+StartupWMClass=de-uib-Main

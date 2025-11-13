@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=opsi-configed---scaled
+Exec=/usr/share/opsi-configed/java/jre/bin/java -Dsun.java2d.uiScale=2.0 -Xmx1536m -jar "configed.jar" -h hhopsi01.linux.mvis.kraken.ibeo.as 
+Icon=opsi-configed
+Path=/usr/share/opsi-configed/
+Type=Application
+Categories=System;Utility;
+Hidden=false
+X-Desktop-File-Install-Version=0.27
